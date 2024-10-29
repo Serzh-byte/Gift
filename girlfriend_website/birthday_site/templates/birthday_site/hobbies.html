@@ -1,0 +1,116 @@
+{% extends "birthday_site/template.html" %}
+{% load static %}
+
+{% block title %}
+    Home Page
+{% endblock %}
+
+{% block head %}
+<link href="{% static 'birthday_site/home.css' %}" rel="stylesheet">
+<style>
+    /* Love-themed Colors */
+    .bg-light-pink {
+        background-color: #fff0f5; /* Light pink background */
+    }
+
+    .bg-pink {
+        background-color: #ff69b4; /* Hot pink for navbar */
+    }
+
+    .text-white {
+        color: #fff;
+    }
+
+    /* Styling Navbar Links */
+    .nav-link {
+        font-size: 1.1em;
+        margin-right: 10px;
+        transition: color 0.2s ease;
+    }
+
+    .nav-link:hover {
+        color: #ffe4e1; /* Lighter pink hover */
+    }
+
+    .navbar-brand {
+        font-weight: bold;
+    }
+
+    /* Container Styling */
+    .content-area {
+        background-color: #fff;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    /* Header Styling */
+    h1 {
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+        font-size: 2.5em;
+        color: #ff1493;
+        margin-top: 20px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid #ff69b4;
+    }
+
+    h2 {
+        font-size: 1.8em;
+        color: #ff69b4;
+        margin-bottom: 20px;
+    }
+
+    .dropdown-menu {
+        background-color: #ff1493;
+    }
+
+    /* List Styling */
+    .list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0 auto;
+        max-width: 400px;
+        font-size: 1.2em;
+        line-height: 1.6em;
+    }
+
+    .list-item {
+        padding: 10px;
+        border-bottom: 1px solid #ffe4e1;
+        transition: background-color 0.3s;
+    }
+
+    .list-item:hover {
+        background-color: lightpink !important; /* Light pink background on hover for each item */
+    }
+
+    /* Font Styling for Consistency */
+    body, h1, p, button {
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+    <div class="bg-light-pink">
+        <div class="text-center">
+            <h1>The things you do that annoy me and make me love you more</h1>
+        </div>
+        
+        <div class="content-area">
+            <h2>Her Hobbies</h2>
+            <ul class="list">
+                <li class="list-item">Being Cute</li>
+                <li class="list-item">Being Absolutely Stunning</li>
+                <li class="list-item">Being Hot af</li>
+                <li class="list-item">Practicing being a celebrity (e.g., leaving me on delivered for hours)</li>
+                <li class="list-item">Practicing 'All Bark No Bite'</li>
+                <li class="list-item">Coming Up With Vile Ways of Killing Girls That Talk To Me</li>
+                <li class="list-item">Acting All Tough and Shit, While Literally Looking Like a Little Cat</li>
+                <li class="list-item">Being My Girlfriend</li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}

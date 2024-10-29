@@ -1,0 +1,53 @@
+/* Love-themed Colors */
+.bg-light-pink {
+    background-color: #fff0f5; /* Light pink background */
+}
+
+.bg-pink {
+    background-color: #ff69b4; /* Hot pink for navbar */
+}
+
+.text-white {
+    color: #fff;
+}
+
+/* Styling Navbar Links */
+.nav-link {
+    font-size: 1.1em;
+    margin-right: 10px;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #ffe4e1; /* Lighter pink hover */
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+/* Container Styling */
+.content-area {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Header Styling */
+h1 {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 2.5em;
+    color: #ff1493; /* Deep pink */
+    margin-top: 20px;
+}
+
+.dropdown-menu {
+    background-color: #ff1493;
+}
+
+.dropdown-item:hover {
+    background-color: #bf2155 !important; /* Light pink on hover */
+    color: #ff69b4; /* Optional: adjust text color for better contrast */
+}

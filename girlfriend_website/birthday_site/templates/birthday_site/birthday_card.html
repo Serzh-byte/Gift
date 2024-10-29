@@ -1,0 +1,117 @@
+{% extends "birthday_site/template.html" %}
+{% load static %}
+
+{% block title %}
+    Birthday Card
+{% endblock %}
+
+{% block head %}
+<link href="{% static 'birthday_site/birthday_card.css' %}" rel="stylesheet">
+<style>
+    /* Card styling */
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-color: #fff0f5;
+    }
+
+    .card {
+        background-color: #fff;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        width: 500px;  /* Increased width for larger card */
+        padding: 30px;
+        text-align: center;
+        position: relative;
+    }
+
+    /* Front of the card */
+    .card-front {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+        background-color: #ff69b4;
+        color: #fff;
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+        border-radius: 15px;
+    }
+
+    .card-front h1 {
+        font-size: 3em;
+        margin-bottom: 15px;
+    }
+
+    .card-front p {
+        font-size: 1.4em;
+        margin: 0;
+    }
+
+    /* Inside the card */
+    .card-inside {
+        padding: 30px;
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+        display: none;
+    }
+
+    .card-inside h2 {
+        font-size: 2em;
+        color: #ff1493;
+        margin-bottom: 15px;
+    }
+
+    .card-inside p {
+        font-size: 1.4em;
+        color: #333;
+        margin: 15px 0;
+    }
+
+    /* Button to open the card */
+    .open-card-btn {
+        padding: 12px 25px;
+        font-size: 1.2em;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+        background-color: #ff1493;
+        color: white;
+    }
+    body, h1, p, button {
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Ensure consistent font across elements */
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+    <div class="card-container">
+        <div class="card">
+            <!-- Front of the card -->
+            <div class="card-front" id="cardFront">
+                <h1>Happy Birthday To The Most Beautiful Girl!</h1>
+                <p>Click To Open Your Birthday Card</p>
+                <button class="open-card-btn" onclick="openCard()">Open Card</button>
+            </div>
+            
+            <!-- Inside the card -->
+            <div class="card-inside" id="cardInside">
+                <p>To Hannah</p>
+                <p>
+                    I may not fully believe in deterministic philosophy, but there's something beautiful in thinking that, from the very beginning of the universe 14 billion years ago, every atom was set on a path to bring us together. Through all our ups and downs, I know we’re strong enough to face anything as long as we’re together. I know you dont like celebrating your birthday, but I want to take a moment to celebrate you – the amazing person you are and how grateful I am that you’re in my life. I love you so much 
+                </p>
+                <p>Your bf</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openCard() {
+            document.getElementById("cardFront").style.display = "none";
+            document.getElementById("cardInside").style.display = "block";
+        }
+    </script>
+{% endblock %}

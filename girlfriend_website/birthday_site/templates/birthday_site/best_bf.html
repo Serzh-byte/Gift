@@ -1,0 +1,45 @@
+{% extends "birthday_site/template.html" %}
+{% load static %}
+
+{% block title %}
+    Best Boyfriend
+{% endblock %}
+
+{% block head %}
+<link href="{% static 'birthday_site/best_bf.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+    <div class="content-area text-center">
+        <h1>AM I THE BEST BF?</h1>
+        <p>easy ass question icl</p>
+        <button class="btn-yes" id="yesBtn">Yes</button>
+        <button class="btn-no" id="noBtn">No</button>
+    </div>
+
+    <script>
+        const noBtn = document.getElementById("noBtn");
+        const yesBtn = document.getElementById("yesBtn");
+
+        noBtn.addEventListener("mouseover", function(event) {
+            // Get current mouse position
+            const mouseX = event.clientX;
+            const mouseY = event.clientY;
+
+            // Calculate new position to avoid mouse
+            let newX, newY;
+            do {
+                newX = Math.random() * (window.innerWidth - noBtn.offsetWidth - 20);
+                newY = Math.random() * (window.innerHeight - noBtn.offsetHeight - 20);
+            } while (Math.abs(newX - mouseX) < 50 && Math.abs(newY - mouseY) < 50); // Keep distance from mouse
+
+            noBtn.style.position = "absolute";
+            noBtn.style.left = `${newX}px`;
+            noBtn.style.top = `${newY}px`;
+        });
+
+        yesBtn.addEventListener("click", function() {
+            alert("Off course I am look at me"); // Replace this message with your own content
+        });
+    </script>
+{% endblock %}
